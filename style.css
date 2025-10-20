@@ -6,80 +6,107 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #0a0f24, #101b3a);
+  background: linear-gradient(-45deg, #090f2c, #0c183f, #071029, #0a0f24);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
   color: #e8e8e8;
   line-height: 1.6;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 header {
-  background: linear-gradient(90deg, #170c3b, #0b1430);
+  background: linear-gradient(90deg, #150a33, #0d173a);
   text-align: center;
-  padding: 35px 15px;
+  padding: 40px 15px;
   border-bottom: 2px solid #00fff5;
+  box-shadow: 0 0 25px rgba(0, 255, 245, 0.2);
 }
 
-header h1 {
-  font-size: 2.4em;
+.glow-text {
+  font-size: 2.6em;
   color: #00fff5;
-  text-shadow: 0 0 10px #00fff5;
+  text-shadow: 0 0 15px #00fff5, 0 0 25px #b026ff;
+  animation: pulseGlow 3s infinite alternate;
 }
 
-header p {
-  color: #ccc;
-  font-size: 0.95em;
+@keyframes pulseGlow {
+  from { text-shadow: 0 0 10px #00fff5, 0 0 20px #b026ff; }
+  to { text-shadow: 0 0 25px #b026ff, 0 0 35px #00fff5; }
 }
 
 nav a {
   color: #fff;
-  margin: 0 10px;
+  margin: 0 12px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #b026ff;
+  color: #00fff5;
+  text-shadow: 0 0 10px #00fff5;
 }
 
 section {
-  padding: 50px 20px;
+  padding: 60px 25px;
   text-align: center;
+  transition: all 1s ease;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
-section h2 {
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
   color: #00fff5;
-  font-size: 1.8em;
-  margin-bottom: 15px;
-}
-
-p, h3 {
-  font-size: 0.95em;
+  font-size: 1.9em;
+  text-shadow: 0 0 12px #00fff5;
+  margin-bottom: 20px;
 }
 
 .company-block {
-  background: #121634;
+  background: rgba(18, 22, 52, 0.7);
   border-left: 5px solid #b026ff;
-  padding: 15px 25px;
+  padding: 20px 25px;
   margin: 40px auto;
-  border-radius: 10px;
-  max-width: 800px;
-  box-shadow: 0 0 10px rgba(176, 38, 255, 0.25);
+  border-radius: 12px;
+  max-width: 850px;
+  transition: 0.3s;
+}
+
+.glow-box:hover {
+  box-shadow: 0 0 25px #b026ff;
+  transform: scale(1.02);
 }
 
 .project {
-  background: #15193c;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 25px auto;
-  max-width: 900px;
-  box-shadow: 0 0 15px rgba(0, 255, 245, 0.3);
+  background: rgba(21, 25, 60, 0.7);
+  padding: 25px;
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 950px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.glow-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px #00fff5;
 }
 
 .project h3 {
   color: #00fff5;
-  margin-bottom: 10px;
-  font-size: 1.2em;
+  margin-bottom: 12px;
+  font-size: 1.3em;
 }
 
 .project p {
@@ -88,57 +115,48 @@ p, h3 {
   font-size: 0.9em;
 }
 
-.project a {
-  color: #b026ff;
-  text-decoration: none;
-}
-
-.project a:hover {
-  color: #00fff5;
-  text-decoration: underline;
-}
-
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .gallery img {
-  width: 180px;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+  width: 200px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #00fff5;
+  transform: scale(1.07);
+  box-shadow: 0 0 20px #00fff5;
 }
 
 footer {
   text-align: center;
-  padding: 10px;
-  background: #0a0f24;
+  padding: 15px;
+  background: #090f2c;
   font-size: 0.8em;
   color: #aaa;
   border-top: 1px solid #00fff5;
+  box-shadow: 0 -2px 20px rgba(0, 255, 245, 0.2);
 }
 
 .itch-link {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 15px;
   background: linear-gradient(135deg, #b026ff, #00fff5);
   color: #000;
   font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 10px;
+  padding: 10px 18px;
+  border-radius: 12px;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .itch-link:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 20px #00fff5;
+  box-shadow: 0 0 25px #00fff5, 0 0 35px #b026ff;
 }
