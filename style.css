@@ -11,10 +11,12 @@ body {
   line-height: 1.6;
 }
 
+/* HEADER */
 header {
   background: #1a1a1a;
   text-align: center;
   padding: 25px 10px;
+  border-bottom: 2px solid #00bcd4;
 }
 
 header h1 {
@@ -24,6 +26,7 @@ header h1 {
 
 header p {
   color: #ccc;
+  font-size: 1.1em;
 }
 
 nav {
@@ -42,48 +45,74 @@ nav a:hover {
   color: #00bcd4;
 }
 
+/* SECTIONS */
 section {
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 section h2 {
   color: #00bcd4;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 2em;
 }
 
+/* ABOUT / EDUCATION */
+#about p, #education p {
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto 15px;
+  line-height: 1.8;
+}
+
+/* PROJECT CARD */
 .project {
   background: #151515;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 25px;
+  border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
-  margin-bottom: 50px;
+  margin: 40px auto;
+  max-width: 1000px;
 }
 
 .project h3 {
   color: #00bcd4;
   margin-bottom: 10px;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .project p {
   color: #ccc;
-  margin-bottom: 20px;
-  max-width: 800px;
+  margin-bottom: 15px;
+  max-width: 850px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.7;
 }
 
+/* HORIZONTAL GALLERY */
 .gallery {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  overflow-x: auto;
   gap: 10px;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+.gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background: #00bcd4;
+  border-radius: 10px;
 }
 
 .gallery img {
-  width: 250px;
+  width: 220px;
+  height: auto;
   border-radius: 10px;
+  flex-shrink: 0;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -92,10 +121,61 @@ section h2 {
   box-shadow: 0 0 10px #00bcd4;
 }
 
+/* SCROLL BUTTONS */
+.scroll-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  gap: 10px;
+}
+
+.scroll-buttons button {
+  background: #00bcd4;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.scroll-buttons button:hover {
+  background: #0097a7;
+}
+
+/* CONTACT */
+#contact a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
 footer {
   background: #1a1a1a;
   text-align: center;
-  padding: 10px;
+  padding: 12px;
   color: #ccc;
   font-size: 0.9em;
+  border-top: 1px solid #00bcd4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .project h3 {
+    font-size: 1.4em;
+  }
+
+  .gallery img {
+    width: 180px;
+  }
 }
