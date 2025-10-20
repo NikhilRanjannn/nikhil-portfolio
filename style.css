@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #0a0f24, #101b3a);
+  background: radial-gradient(circle at top left, #080c1f, #101b3a);
   color: #e8e8e8;
   line-height: 1.6;
   overflow-x: hidden;
@@ -17,12 +17,13 @@ header {
   text-align: center;
   padding: 35px 15px;
   border-bottom: 2px solid #00fff5;
+  box-shadow: 0 0 25px #00fff5;
 }
 
 header h1 {
   font-size: 2.4em;
   color: #00fff5;
-  text-shadow: 0 0 10px #00fff5;
+  text-shadow: 0 0 15px #00fff5;
 }
 
 header p {
@@ -40,6 +41,7 @@ nav a {
 
 nav a:hover {
   color: #b026ff;
+  text-shadow: 0 0 10px #b026ff;
 }
 
 section {
@@ -51,70 +53,42 @@ section h2 {
   color: #00fff5;
   font-size: 1.8em;
   margin-bottom: 15px;
+  text-shadow: 0 0 15px #00fff5;
 }
 
-p, h3 {
-  font-size: 0.95em;
-}
-
-.company-block {
+.company-block, .ai-odyssey-block, .project {
   background: #121634;
-  border-left: 5px solid #b026ff;
-  padding: 15px 25px;
-  margin: 40px auto;
-  border-radius: 10px;
-  max-width: 800px;
-  box-shadow: 0 0 10px rgba(176, 38, 255, 0.25);
-}
-
-.project {
-  background: #15193c;
-  padding: 20px;
   border-radius: 12px;
   margin: 25px auto;
   max-width: 900px;
-  box-shadow: 0 0 15px rgba(0, 255, 245, 0.3);
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 245, 0.2);
+  transition: all 0.4s ease;
 }
 
-.project h3 {
-  color: #00fff5;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-}
-
-.project p {
-  margin-bottom: 10px;
-  color: #ccc;
-  font-size: 0.9em;
-}
-
-.project a {
-  color: #b026ff;
-  text-decoration: none;
-}
-
-.project a:hover {
-  color: #00fff5;
-  text-decoration: underline;
+.glow:hover {
+  box-shadow: 0 0 25px #00fff5, 0 0 40px #b026ff;
+  transform: translateY(-5px);
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 10px;
+  justify-items: center;
+  margin-top: 10px;
 }
 
 .gallery img {
-  width: 180px;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 180px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
 }
 
 .gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #00fff5;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00fff5;
 }
 
 footer {
