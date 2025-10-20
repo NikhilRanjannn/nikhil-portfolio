@@ -57,15 +57,35 @@ section h2 {
   font-size: 2em;
 }
 
-/* ABOUT / EDUCATION */
-#about p, #education p {
+/* ABOUT / EDUCATION / EXPERIENCE */
+#about p, #education p, #experience p {
   color: #ccc;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto 15px;
   line-height: 1.8;
+  font-size: 1.05em;
 }
 
-/* PROJECT CARD */
+#experience h3 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.exp-project {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+}
+
+.exp-project h4 {
+  color: #00bcd4;
+  margin-bottom: 8px;
+}
+
+/* PROJECT GALLERY */
 .project {
   background: #151515;
   padding: 25px;
@@ -81,16 +101,6 @@ section h2 {
   font-size: 1.6em;
 }
 
-.project p {
-  color: #ccc;
-  margin-bottom: 15px;
-  max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.7;
-}
-
-/* HORIZONTAL GALLERY */
 .gallery {
   display: flex;
   overflow-x: auto;
