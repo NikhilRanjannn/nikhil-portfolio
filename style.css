@@ -1,4 +1,4 @@
-/* === GLOBAL SETTINGS === */
+/* === RESET === */
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +6,9 @@
 }
 
 :root {
-  --bg-dark: #0a0f24;
+  --bg-dark: #060b1b;
   --text-light: #e8e8e8;
+  --text-dim: #c9c9d6;
   --neon-primary: #00fff5;
   --neon-secondary: #b026ff;
   --neon-accent: #ff44cc;
@@ -15,9 +16,10 @@
   --btn-gradient-end: #b026ff;
 }
 
+/* === BACKGROUND === */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(-45deg, #090f2c, #0c183f, #071029, #0a0f24);
+  background: linear-gradient(-45deg, #070c23, #0c173c, #120b3b, #0a0f24);
   background-size: 400% 400%;
   animation: gradientMove 12s ease infinite;
   color: var(--text-light);
@@ -26,7 +28,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* === BACKGROUND MOVING GRADIENT === */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -35,30 +36,31 @@ body {
 
 /* === HEADER === */
 header {
-  background: linear-gradient(90deg, #150a33, #0d173a);
+  background: linear-gradient(90deg, #120a33, #0b1639);
   text-align: center;
-  padding: 50px 15px;
+  padding: 55px 15px;
   border-bottom: 2px solid var(--neon-primary);
-  box-shadow: 0 0 25px rgba(0, 255, 245, 0.3);
+  box-shadow: 0 0 25px rgba(0, 255, 245, 0.2);
 }
 
 header p {
-  color: #bbb;
+  color: var(--text-dim);
   font-size: 1em;
-  margin-top: 5px;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
 }
 
-/* === GLOWING NAME === */
+/* === NAME GLOW === */
 .glow-text {
-  font-size: 2.6em;
+  font-size: 2.8em;
   color: var(--neon-primary);
-  text-shadow: 0 0 15px var(--neon-primary), 0 0 25px var(--neon-secondary);
+  text-shadow: 0 0 20px var(--neon-primary), 0 0 35px var(--neon-secondary);
   animation: pulseGlow 3s infinite alternate;
 }
 
 @keyframes pulseGlow {
-  from { text-shadow: 0 0 10px var(--neon-primary), 0 0 20px var(--neon-secondary); }
-  to { text-shadow: 0 0 25px var(--neon-secondary), 0 0 35px var(--neon-primary); }
+  from { text-shadow: 0 0 12px var(--neon-primary), 0 0 22px var(--neon-secondary); }
+  to { text-shadow: 0 0 30px var(--neon-secondary), 0 0 45px var(--neon-primary); }
 }
 
 /* === NAVIGATION === */
@@ -67,26 +69,27 @@ nav {
 }
 
 nav a {
-  color: var(--text-light);
-  margin: 0 12px;
+  color: #fff;
+  margin: 0 14px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
   color: var(--neon-primary);
-  text-shadow: 0 0 10px var(--neon-primary);
+  text-shadow: 0 0 10px var(--neon-primary), 0 0 15px var(--neon-secondary);
 }
 
 /* === SECTIONS === */
 section {
-  padding: 60px 25px;
+  padding: 70px 30px;
   text-align: center;
-  transition: all 1s ease;
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(40px);
+  transition: all 1s ease;
 }
 
 section.visible {
@@ -97,59 +100,63 @@ section.visible {
 section h2 {
   color: var(--neon-primary);
   font-size: 2em;
-  margin-bottom: 20px;
-  text-shadow: 0 0 12px var(--neon-primary);
+  margin-bottom: 25px;
+  text-shadow: 0 0 12px var(--neon-primary), 0 0 20px var(--neon-secondary);
 }
 
 /* === COMPANY BLOCK === */
 .company-block {
-  background: rgba(18, 22, 52, 0.7);
+  background: rgba(17, 22, 50, 0.8);
   border-left: 5px solid var(--neon-secondary);
-  padding: 20px 25px;
-  margin: 40px auto;
+  padding: 20px 30px;
+  margin: 45px auto;
   border-radius: 12px;
-  max-width: 850px;
-  transition: 0.3s;
+  max-width: 880px;
+  box-shadow: 0 0 15px rgba(176, 38, 255, 0.2);
+  transition: all 0.4s ease;
 }
 
-.glow-box:hover {
-  box-shadow: 0 0 25px var(--neon-secondary);
+.company-block:hover {
   transform: scale(1.02);
+  box-shadow: 0 0 25px var(--neon-secondary);
 }
 
-/* === PROJECT CARDS === */
+/* === PROJECT CARD === */
 .project {
-  background: rgba(21, 25, 60, 0.7);
+  background: rgba(21, 25, 60, 0.85);
+  border: 1px solid rgba(0, 255, 245, 0.2);
+  border-radius: 14px;
   padding: 25px;
-  border-radius: 15px;
   margin: 30px auto;
-  max-width: 950px;
+  max-width: 1000px;
+  box-shadow: 0 0 15px rgba(0, 255, 245, 0.15);
   transition: transform 0.4s, box-shadow 0.4s;
-  border: 1px solid rgba(0, 255, 245, 0.3);
 }
 
-.glow-card:hover {
+.project:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 30px var(--neon-primary), 0 0 50px var(--neon-secondary);
+  box-shadow: 0 0 35px var(--neon-primary), 0 0 45px var(--neon-secondary);
 }
 
 .project h3 {
   color: var(--neon-primary);
   margin-bottom: 12px;
   font-size: 1.4em;
-  text-shadow: 0 0 10px var(--neon-primary);
+  text-shadow: 0 0 12px var(--neon-primary);
 }
 
 .project p {
-  margin-bottom: 10px;
-  color: #ccc;
-  font-size: 0.95em;
+  margin-bottom: 12px;
+  color: var(--text-dim);
+  font-size: 0.96em;
+  line-height: 1.7;
 }
 
 .project a {
   color: var(--neon-secondary);
   text-decoration: none;
   font-weight: bold;
+  transition: all 0.3s;
 }
 
 .project a:hover {
@@ -162,12 +169,13 @@ section h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 14px;
+  margin-top: 15px;
 }
 
 .gallery img {
-  width: 210px;
+  width: 230px;
+  height: auto;
   border-radius: 12px;
   transition: all 0.4s ease;
   box-shadow: 0 0 15px rgba(0, 255, 245, 0.25);
@@ -178,80 +186,70 @@ section h2 {
   box-shadow: 0 0 30px var(--neon-primary), 0 0 40px var(--neon-secondary);
 }
 
-/* === ROBLOX SECTION === */
+/* === ROBLOX SECTION SPECIAL === */
 .roblox-section {
-  background: linear-gradient(145deg, rgba(15, 10, 35, 0.9), rgba(30, 15, 60, 0.9));
+  background: linear-gradient(145deg, rgba(15, 10, 35, 0.95), rgba(30, 15, 60, 0.9));
   border: 1px solid rgba(176, 38, 255, 0.3);
-  box-shadow: 0 0 25px rgba(0, 255, 245, 0.25);
-  transition: all 0.4s ease;
-}
-
-.roblox-section:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 0 35px var(--neon-secondary), 0 0 50px var(--neon-primary);
 }
 
 .roblox-section h3 {
   color: var(--neon-secondary);
-  text-shadow: 0 0 12px var(--neon-secondary), 0 0 18px var(--neon-primary);
-}
-
-.roblox-desc {
-  color: #d3d3ff;
-  font-size: 0.95em;
-  line-height: 1.7;
+  text-shadow: 0 0 10px var(--neon-secondary), 0 0 18px var(--neon-primary);
 }
 
 /* === BUTTONS === */
 .btn, .itch-link {
   display: inline-block;
-  margin-top: 15px;
+  margin-top: 18px;
   background: linear-gradient(135deg, var(--btn-gradient-start), var(--btn-gradient-end));
   color: #000;
-  font-weight: bold;
-  padding: 12px 25px;
+  font-weight: 700;
+  padding: 12px 28px;
   border-radius: 12px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: 0.4s;
+  transition: 0.4s ease;
   border: none;
+  box-shadow: 0 0 15px rgba(0, 255, 245, 0.25);
 }
 
 .btn:hover, .itch-link:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 25px var(--neon-primary), 0 0 35px var(--neon-secondary);
   background: var(--neon-accent);
   color: #fff;
+  box-shadow: 0 0 25px var(--neon-accent), 0 0 40px var(--neon-primary);
+}
+
+/* === CONTACT === */
+#contact a {
+  color: var(--neon-primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  color: var(--neon-secondary);
+  text-shadow: 0 0 10px var(--neon-secondary);
 }
 
 /* === FOOTER === */
 footer {
   text-align: center;
-  padding: 15px;
-  background: #090f2c;
-  font-size: 0.85em;
+  padding: 20px;
+  background: #080d20;
   color: #aaa;
+  font-size: 0.9em;
   border-top: 1px solid var(--neon-primary);
   box-shadow: 0 -2px 20px rgba(0, 255, 245, 0.2);
 }
 
 /* === RESPONSIVE === */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.8em;
-  }
-  .gallery img {
-    width: 150px;
-  }
-  section h2 {
-    font-size: 1.5em;
-  }
-  .project, .company-block {
-    padding: 15px;
-  }
-  nav a {
-    display: inline-block;
-    margin: 6px;
-  }
+@media (max-width: 850px) {
+  header h1 { font-size: 2em; }
+  nav a { display: inline-block; margin: 5px 8px; font-size: 0.85em; }
+  section h2 { font-size: 1.5em; }
+  .gallery img { width: 160px; }
+  .project, .company-block { padding: 18px; }
+  .btn, .itch-link { padding: 10px 20px; font-size: 0.9em; }
 }
