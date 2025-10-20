@@ -135,39 +135,19 @@ section h2 {
   text-decoration: underline;
 }
 
-/* 🖼️ FIXED GALLERY DISPLAY */
+/* 🖼️ IMPROVED GALLERY DISPLAY */
 .gallery {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  gap: 15px;
+  flex-wrap: wrap;          /* ⬅ wrap images to next line */
+  justify-content: center;  /* ⬅ center all rows */
+  gap: 18px;
   padding: 15px 10px;
-  scroll-behavior: smooth;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
 }
 
-.gallery::-webkit-scrollbar {
-  height: 10px;
-}
-
-.gallery::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #00fff5, #b026ff);
-  border-radius: 10px;
-}
-
-.gallery::-webkit-scrollbar-track {
-  background: #0a0f24;
-}
-
-/* 🖼️ IMAGES INSIDE GALLERY */
 .gallery img {
-  width: 240px;
+  width: 230px;
   height: auto;
   border-radius: 12px;
-  flex-shrink: 0;
   object-fit: cover;
   border: 2px solid transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s;
@@ -179,30 +159,9 @@ section h2 {
   box-shadow: 0 0 25px #00fff5;
 }
 
-/* ⬅️➡️ SCROLL BUTTONS */
+/* ⬅️➡️ SCROLL BUTTONS — removed since wrapping used */
 .scroll-buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  gap: 10px;
-}
-
-.scroll-buttons button {
-  background: linear-gradient(135deg, #b026ff, #00fff5);
-  border: none;
-  color: white;
-  font-size: 1.2em;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 0 15px rgba(0, 255, 245, 0.4);
-}
-
-.scroll-buttons button:hover {
-  background: #00fff5;
-  color: #000;
-  transform: scale(1.1);
+  display: none;
 }
 
 /* 📞 CONTACT */
@@ -230,40 +189,15 @@ footer {
 
 /* 📱 RESPONSIVE */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2.2em;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 6px 10px;
-  }
-
-  section h2 {
-    font-size: 1.8em;
-  }
-
-  .project {
-    padding: 20px;
-  }
-
-  .gallery img {
-    width: 180px;
-  }
-
-  .scroll-buttons button {
-    font-size: 1em;
-  }
+  header h1 { font-size: 2.2em; }
+  nav a { display: inline-block; margin: 6px 10px; }
+  section h2 { font-size: 1.8em; }
+  .project { padding: 20px; }
+  .gallery img { width: 160px; }
 }
 
 /* ✨ ANIMATIONS */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
