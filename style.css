@@ -1,4 +1,4 @@
-/* === RESET === */
+/* === GLOBAL SETTINGS === */
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,6 @@
   --btn-gradient-end: #b026ff;
 }
 
-/* === BACKGROUND === */
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(-45deg, #070c23, #0c173c, #120b3b, #0a0f24);
@@ -104,23 +103,6 @@ section h2 {
   text-shadow: 0 0 12px var(--neon-primary), 0 0 20px var(--neon-secondary);
 }
 
-/* === COMPANY BLOCK === */
-.company-block {
-  background: rgba(17, 22, 50, 0.8);
-  border-left: 5px solid var(--neon-secondary);
-  padding: 20px 30px;
-  margin: 45px auto;
-  border-radius: 12px;
-  max-width: 880px;
-  box-shadow: 0 0 15px rgba(176, 38, 255, 0.2);
-  transition: all 0.4s ease;
-}
-
-.company-block:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 25px var(--neon-secondary);
-}
-
 /* === PROJECT CARD === */
 .project {
   background: rgba(21, 25, 60, 0.85);
@@ -186,19 +168,8 @@ section h2 {
   box-shadow: 0 0 30px var(--neon-primary), 0 0 40px var(--neon-secondary);
 }
 
-/* === ROBLOX SECTION SPECIAL === */
-.roblox-section {
-  background: linear-gradient(145deg, rgba(15, 10, 35, 0.95), rgba(30, 15, 60, 0.9));
-  border: 1px solid rgba(176, 38, 255, 0.3);
-}
-
-.roblox-section h3 {
-  color: var(--neon-secondary);
-  text-shadow: 0 0 10px var(--neon-secondary), 0 0 18px var(--neon-primary);
-}
-
 /* === BUTTONS === */
-.btn, .itch-link {
+.btn {
   display: inline-block;
   margin-top: 18px;
   background: linear-gradient(135deg, var(--btn-gradient-start), var(--btn-gradient-end));
@@ -214,23 +185,11 @@ section h2 {
   box-shadow: 0 0 15px rgba(0, 255, 245, 0.25);
 }
 
-.btn:hover, .itch-link:hover {
+.btn:hover {
   transform: scale(1.1);
   background: var(--neon-accent);
   color: #fff;
   box-shadow: 0 0 25px var(--neon-accent), 0 0 40px var(--neon-primary);
-}
-
-/* === CONTACT === */
-#contact a {
-  color: var(--neon-primary);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#contact a:hover {
-  color: var(--neon-secondary);
-  text-shadow: 0 0 10px var(--neon-secondary);
 }
 
 /* === FOOTER === */
@@ -250,6 +209,6 @@ footer {
   nav a { display: inline-block; margin: 5px 8px; font-size: 0.85em; }
   section h2 { font-size: 1.5em; }
   .gallery img { width: 160px; }
-  .project, .company-block { padding: 18px; }
-  .btn, .itch-link { padding: 10px 20px; font-size: 0.9em; }
+  .project { padding: 18px; }
+  .btn { padding: 10px 20px; font-size: 0.9em; }
 }

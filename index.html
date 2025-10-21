@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nikhil Ranjan | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Nikhil Ranjan | Game Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -21,17 +21,18 @@
 
 <section id="about" class="fade-section">
   <h2>🧑‍💻 About Me</h2>
-  <p>I'm <strong>Nikhil Ranjan</strong>, a passionate Game Developer with over <strong>4 years</strong> building immersive games using Unity, Roblox, and Ren'Py. I combine AI, ML, and game design to create adaptive play experiences and intelligent systems.</p>
+  <p>I’m <b>Nikhil Ranjan</b>, a passionate Game Developer with over <b>4 years</b> of experience creating immersive and intelligent games using <b>Unity Engine</b>, <b>Roblox Studio</b>, and <b>Ren’Py Engine</b>.</p>
+  <p>I blend <b>AI-driven gameplay systems</b>, <b>Machine Learning</b>, and <b>Data Science</b> to craft adaptive, fun, and futuristic gaming experiences.</p>
 </section>
 
 <section id="education" class="fade-section">
   <h2>🎓 Education</h2>
-  <p><strong>M.Tech — AI & Data Science Engineering</strong><br>IIT Patna — CPI: 8.61</p>
-  <p><strong>B.Tech — Computer Science & Engineering</strong><br>SHIATS Institute, Prayagraj</p>
+  <p><b>M.Tech in Artificial Intelligence & Data Science Engineering</b><br>IIT Patna — CPI 8.61</p>
+  <p><b>B.Tech in Computer Science and Engineering</b><br>SHIATS Institute, Prayagraj</p>
 </section>
 
 <section id="experience" class="fade-section">
-  <h2>💼 Experience</h2>
+  <h2>💼 Professional Experience</h2>
   <div class="company-links">
     <a class="btn" href="pushback.html">Pushback Technologies</a>
     <a class="btn" href="homeseekers.html">HomeseekerS-Gamein</a>
@@ -44,7 +45,7 @@
 <section id="contact" class="fade-section">
   <h2>📩 Contact</h2>
   <p>Email: <a href="mailto:nikhil.srivastav08@gmail.com">nikhil.srivastav08@gmail.com</a></p>
-  <p>Phone: <a href="tel:+918340362354">+91-8340362354</a></p>
+  <p>Phone: <a href="tel:+918340362354">+91 8340362354</a></p>
   <p>LinkedIn: <a href="https://www.linkedin.com/in/nikhilranjann/" target="_blank">linkedin.com/in/nikhilranjann</a></p>
   <p>GitHub: <a href="https://github.com/NikhilRanjannn" target="_blank">github.com/NikhilRanjannn</a></p>
   <a class="btn" href="https://nikrann.itch.io/" target="_blank">🎮 Play My GameJam Games on Itch.io</a>
@@ -55,17 +56,16 @@
 </footer>
 
 <script>
-  // Fade-in on scroll
-  const faders = document.querySelectorAll('.fade-section');
-  const appearOptions = { threshold: 0.2 };
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    });
-  }, appearOptions);
-  faders.forEach(fader => appearOnScroll.observe(fader));
+const faders=document.querySelectorAll('.fade-section');
+const appearOptions={threshold:0.2};
+const appearOnScroll=new IntersectionObserver((entries,observer)=>{
+entries.forEach(entry=>{
+if(!entry.isIntersecting)return;
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+});
+},appearOptions);
+faders.forEach(fader=>appearOnScroll.observe(fader));
 </script>
 
 </body>
