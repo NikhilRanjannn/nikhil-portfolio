@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
 }
 
 :root {
@@ -36,7 +37,7 @@ header {
   text-align: center;
   padding: 60px 20px;
   background: rgba(10, 10, 35, 0.9);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
   border-bottom: 1px solid var(--neon-primary);
 }
 
@@ -52,17 +53,31 @@ header {
   to { text-shadow: 0 0 40px var(--neon-secondary); }
 }
 
+header p {
+  color: var(--text-dim);
+  font-size: 1.2em;
+  margin-top: 10px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
 /* === NAVIGATION === */
+nav {
+  margin-top: 15px;
+}
+
 nav a {
   color: var(--text-main);
-  margin: 0 12px;
+  margin: 0 14px;
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 1px;
   transition: 0.3s;
+  font-size: 1em;
 }
+
 nav a:hover {
   color: var(--neon-secondary);
-  text-shadow: 0 0 12px var(--neon-secondary);
+  text-shadow: 0 0 15px var(--neon-secondary), 0 0 30px var(--neon-primary);
 }
 
 /* === SECTIONS === */
@@ -73,48 +88,70 @@ section {
   transform: translateY(40px);
   transition: all 1s ease;
 }
+
 section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+section h2 {
+  font-size: 2.2em;
+  color: var(--neon-primary);
+  text-shadow: 0 0 20px var(--neon-primary), 0 0 40px var(--neon-secondary);
+  margin-bottom: 25px;
+  letter-spacing: 1px;
 }
 
 /* === BUTTONS === */
 .btn {
   display: inline-block;
   margin: 20px 10px;
-  padding: 12px 28px;
-  font-weight: bold;
+  padding: 12px 32px;
+  font-size: 1.05em;
   color: #000;
   background: linear-gradient(135deg, #ffffff, #b8b8ff);
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.4s;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
 }
+
 .btn:hover {
   transform: scale(1.1);
   color: #fff;
   background: #9a9aff;
-  box-shadow: 0 0 30px #fff, 0 0 50px #9a9aff;
+  box-shadow: 0 0 30px #fff, 0 0 60px #9a9aff;
 }
 
-/* === PROJECTS === */
+/* === PROJECT CARDS === */
 .project {
   background: rgba(15, 18, 40, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 25px;
-  margin: 30px auto;
-  max-width: 950px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  transition: all 0.4s ease;
 }
+
 .project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px var(--neon-primary), 0 0 50px var(--neon-secondary);
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px var(--neon-primary), 0 0 60px var(--neon-secondary);
 }
+
 .project h3 {
   color: var(--neon-primary);
-  text-shadow: 0 0 15px var(--neon-primary);
+  text-shadow: 0 0 15px var(--neon-primary), 0 0 30px var(--neon-secondary);
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: var(--text-dim);
+  margin-bottom: 12px;
+  font-size: 1.05em;
+  text-shadow: 0 0 5px rgba(255,255,255,0.3);
 }
 
 /* === GALLERY === */
@@ -122,25 +159,56 @@ section.visible {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
+  margin-top: 15px;
 }
+
 .gallery img {
-  width: 220px;
+  width: 230px;
   border-radius: 10px;
   transition: all 0.4s;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255,255,255,0.15);
 }
+
 .gallery img:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 25px var(--neon-primary), 0 0 35px var(--neon-secondary);
+  box-shadow: 0 0 25px #ffffff, 0 0 40px #b8b8ff;
+  border-color: #ffffff;
+}
+
+/* === CONTACT === */
+#contact a {
+  color: var(--neon-primary);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#contact a:hover {
+  color: var(--neon-secondary);
+  text-shadow: 0 0 15px var(--neon-secondary);
 }
 
 /* === FOOTER === */
 footer {
   text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
+  padding: 25px;
+  font-size: 1em;
   color: var(--text-dim);
   background: rgba(8, 10, 25, 0.9);
   border-top: 1px solid var(--neon-primary);
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .gallery img {
+    width: 90%;
+  }
+  .glow-text {
+    font-size: 2.2em;
+  }
+  section h2 {
+    font-size: 1.8em;
+  }
 }
