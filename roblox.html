@@ -22,26 +22,37 @@
 
   <div class="project">
     <h3>3D Runner</h3>
-    <p>A fast-paced survival runner built in Roblox Studio. Players dodge obstacles, collect power-ups, and survive through levels.</p>
+    <p>A fast-paced 3D endless runner built in Roblox Studio.  
+       Players dodge obstacles, collect boosts, and survive as long as possible —  
+       featuring checkpoints, power-ups, and progressive difficulty scaling.</p>
+
     <div class="gallery">
-      <img src="Projects/Roblox/3D-Runner/1.JPG" />
-      <img src="Projects/Roblox/3D-Runner/2.JPG" />
-      <img src="Projects/Roblox/3D-Runner/3.JPG" />
-      <img src="Projects/Roblox/3D-Runner/4.JPG" />
+      <img src="Projects/Roblox/3D-Runner/1.JPG" alt="3D Runner Screenshot 1" />
+      <img src="Projects/Roblox/3D-Runner/2.JPG" alt="3D Runner Screenshot 2" />
+      <img src="Projects/Roblox/3D-Runner/3.JPG" alt="3D Runner Screenshot 3" />
+      <img src="Projects/Roblox/3D-Runner/4.JPG" alt="3D Runner Screenshot 4" />
     </div>
   </div>
 
   <a class="btn" href="index.html">⬅ Back to Home</a>
 </section>
 
-<footer><p>© 2025 Nikhil Ranjan | Roblox Studio</p></footer>
+<footer>
+  <p>© 2025 Nikhil Ranjan | Roblox Studio</p>
+</footer>
 
 <script>
-const faders=document.querySelectorAll('.fade-section');
-const obs=new IntersectionObserver((e,o)=>{
-e.forEach(x=>{if(!x.isIntersecting)return;x.target.classList.add('visible');o.unobserve(x.target);});
-},{threshold:0.2});
-faders.forEach(f=>obs.observe(f));
+// Smooth fade-in effect for sections
+const faders = document.querySelectorAll('.fade-section');
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    obs.unobserve(entry.target);
+  });
+}, { threshold: 0.2 });
+
+faders.forEach(f => observer.observe(f));
 </script>
 
 </body>

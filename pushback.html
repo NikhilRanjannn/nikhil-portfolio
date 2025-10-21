@@ -18,45 +18,78 @@
 </header>
 
 <section id="projects" class="fade-section">
-  <h2>🎮 Pushback Projects</h2>
+  <h2>🎮 Pushback Technologies Projects</h2>
 
   <div class="project">
     <h3>Dus Ka Dum</h3>
-    <p>A fun quiz game where players answer 10 questions to win. Includes score tracking and timed rounds.</p>
+    <p>A quiz show game where players answer 10 questions to win — inspired by the TV show. Includes scoring and timed rounds.</p>
     <div class="gallery">
-      <img src="Projects/Pushback-Technologies/Dus-Ka-Dum/1.JPG" />
-      <img src="Projects/Pushback-Technologies/Dus-Ka-Dum/2.JPG" />
-      <img src="Projects/Pushback-Technologies/Dus-Ka-Dum/3.JPG" />
-      <img src="Projects/Pushback-Technologies/Dus-Ka-Dum/4.JPG" />
+      <img src="Projects/Pushback-Technologies/1-Dus-Ka-Dum/1.JPG" />
+      <img src="Projects/Pushback-Technologies/1-Dus-Ka-Dum/2.JPG" />
+      <img src="Projects/Pushback-Technologies/1-Dus-Ka-Dum/3.JPG" />
+      <img src="Projects/Pushback-Technologies/1-Dus-Ka-Dum/4.JPG" />
+      <img src="Projects/Pushback-Technologies/1-Dus-Ka-Dum/5.JPG" />
+      <img src="Projects/Pushback-Technologies/1-Dus-Ka-Dum/6.JPG" />
+      <img src="Projects/Pushback-Technologies/1-Dus-Ka-Dum/7.JPG" />
     </div>
   </div>
 
   <div class="project">
     <h3>Fall Game</h3>
-    <p>Survive falling obstacles while collecting coins in this endless challenge game with dynamic physics.</p>
+    <p>Survive falling obstacles and collect points in a physics-based challenge built with Unity.</p>
     <div class="gallery">
-      <img src="Projects/Pushback-Technologies/Fall-Game/1.JPG" />
-      <img src="Projects/Pushback-Technologies/Fall-Game/2.JPG" />
-      <img src="Projects/Pushback-Technologies/Fall-Game/3.JPG" />
+      <img src="Projects/Pushback-Technologies/2-Fall-Game/1.JPG" />
+      <img src="Projects/Pushback-Technologies/2-Fall-Game/2.JPG" />
+      <img src="Projects/Pushback-Technologies/2-Fall-Game/3.JPG" />
+      <img src="Projects/Pushback-Technologies/2-Fall-Game/4.JPG" />
+      <img src="Projects/Pushback-Technologies/2-Fall-Game/5.JPG" />
     </div>
   </div>
 
   <div class="project">
     <h3>Fat Man Survive</h3>
-    <p>An obstacle-avoidance arcade survival game with power-ups and difficulty scaling.</p>
+    <p>An obstacle-avoidance survival game with dynamic enemies, checkpoints, and rewards.</p>
     <div class="gallery">
-      <img src="Projects/Pushback-Technologies/Fat-Man-Survive/1.JPG" />
-      <img src="Projects/Pushback-Technologies/Fat-Man-Survive/2.JPG" />
-      <img src="Projects/Pushback-Technologies/Fat-Man-Survive/3.JPG" />
+      <img src="Projects/Pushback-Technologies/3-Fat-Man-Survive/1.JPG" />
+      <img src="Projects/Pushback-Technologies/3-Fat-Man-Survive/2.JPG" />
+      <img src="Projects/Pushback-Technologies/3-Fat-Man-Survive/3.JPG" />
+      <img src="Projects/Pushback-Technologies/3-Fat-Man-Survive/4.JPG" />
+      <img src="Projects/Pushback-Technologies/3-Fat-Man-Survive/5.JPG" />
+      <img src="Projects/Pushback-Technologies/3-Fat-Man-Survive/6.JPG" />
+      <img src="Projects/Pushback-Technologies/3-Fat-Man-Survive/7.JPG" />
+      <img src="Projects/Pushback-Technologies/3-Fat-Man-Survive/8.JPG" />
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Finger Furry</h3>
+    <p>A fast-paced reflex arcade where timing is key. Players tap to dodge traps and score high.</p>
+    <div class="gallery">
+      <img src="Projects/Pushback-Technologies/4-Finger-Furry/1.JPG" />
+      <img src="Projects/Pushback-Technologies/4-Finger-Furry/2.JPG" />
+      <img src="Projects/Pushback-Technologies/4-Finger-Furry/3.JPG" />
+      <img src="Projects/Pushback-Technologies/4-Finger-Furry/4.JPG" />
+      <img src="Projects/Pushback-Technologies/4-Finger-Furry/5.JPG" />
+      <img src="Projects/Pushback-Technologies/4-Finger-Furry/6.JPG" />
+      <img src="Projects/Pushback-Technologies/4-Finger-Furry/7.JPG" />
+      <img src="Projects/Pushback-Technologies/4-Finger-Furry/8.JPG" />
+      <img src="Projects/Pushback-Technologies/4-Finger-Furry/9.JPG" />
+      <img src="Projects/Pushback-Technologies/4-Finger-Furry/10.JPG" />
     </div>
   </div>
 
   <a class="btn" href="index.html">⬅ Back to Home</a>
 </section>
 
-<footer>
-  <p>© 2025 Nikhil Ranjan | Pushback Technologies</p>
-</footer>
+<footer><p>© 2025 Nikhil Ranjan | Pushback Technologies</p></footer>
+
+<script>
+const faders=document.querySelectorAll('.fade-section');
+const obs=new IntersectionObserver((e,o)=>{
+e.forEach(x=>{if(!x.isIntersecting)return;x.target.classList.add('visible');o.unobserve(x.target);});
+},{threshold:0.2});
+faders.forEach(f=>obs.observe(f));
+</script>
 
 </body>
 </html>
