@@ -5,12 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Roblox Studio | Nikhil Ranjan</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body, h1, h2, h3, p, a {
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+    }
+    p { font-size: 1.05em; line-height: 1.6; }
+  </style>
 </head>
 <body>
 
 <header>
   <h1 class="glow-text">Roblox Studio Projects</h1>
-  <p>3D Roblox Games by Nikhil Ranjan</p>
+  <p>3D Adventure and Survival Games Developed by <b>Nikhil Ranjan</b></p>
   <nav>
     <a href="index.html">Home</a>
     <a href="#projects">Projects</a>
@@ -18,19 +25,20 @@
 </header>
 
 <section id="projects" class="fade-section">
-  <h2>🏃 Roblox Projects</h2>
+  <h2>🏃 Roblox Game Projects</h2>
 
   <div class="project">
     <h3>3D Runner</h3>
-    <p>A fast-paced 3D endless runner built in Roblox Studio.  
-       Players dodge obstacles, collect boosts, and survive as long as possible —  
-       featuring checkpoints, power-ups, and progressive difficulty scaling.</p>
+    <p><b>3D Runner</b> is a thrilling survival-based obstacle runner built in <b>Roblox Studio</b>. 
+       The player dashes through a dynamic lava-filled environment, dodging explosive traps, collecting 
+       coins, and unlocking checkpoints with each successful run. The game features energy boosts, 
+       particle effects, and fast-paced music for a truly engaging experience.</p>
 
     <div class="gallery">
-      <img src="Projects/Roblox/3D-Runner/1.JPG" alt="3D Runner Screenshot 1" />
-      <img src="Projects/Roblox/3D-Runner/2.JPG" alt="3D Runner Screenshot 2" />
-      <img src="Projects/Roblox/3D-Runner/3.JPG" alt="3D Runner Screenshot 3" />
-      <img src="Projects/Roblox/3D-Runner/4.JPG" alt="3D Runner Screenshot 4" />
+      <img src="Projects/Roblox/3d-Runner/1.JPG" alt="3D Runner Screenshot 1" />
+      <img src="Projects/Roblox/3d-Runner/2.JPG" alt="3D Runner Screenshot 2" />
+      <img src="Projects/Roblox/3d-Runner/3.JPG" alt="3D Runner Screenshot 3" />
+      <img src="Projects/Roblox/3d-Runner/4.JPG" alt="3D Runner Screenshot 4" />
     </div>
   </div>
 
@@ -38,11 +46,10 @@
 </section>
 
 <footer>
-  <p>© 2025 Nikhil Ranjan | Roblox Studio</p>
+  <p>© 2025 <b>Nikhil Ranjan</b> | Roblox Studio Creations</p>
 </footer>
 
 <script>
-// Smooth fade-in effect for sections
 const faders = document.querySelectorAll('.fade-section');
 const observer = new IntersectionObserver((entries, obs) => {
   entries.forEach(entry => {
@@ -51,7 +58,6 @@ const observer = new IntersectionObserver((entries, obs) => {
     obs.unobserve(entry.target);
   });
 }, { threshold: 0.2 });
-
 faders.forEach(f => observer.observe(f));
 </script>
 
