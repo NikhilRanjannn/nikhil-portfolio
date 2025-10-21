@@ -5,12 +5,21 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>HomeseekerS-Gamein | Nikhil Ranjan</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body, h1, h2, h3, p, a { font-family: 'Times New Roman', serif; font-weight: bold; }
+    .gallery img { border-radius: 12px; object-fit: cover; width: 260px; transition: 0.4s; }
+    .gallery img:hover { transform: scale(1.1); box-shadow: 0 0 25px #ffffff, 0 0 40px #b8b8ff; }
+    .demo-link { display: inline-block; margin-top: 20px; color: #fff; background: #ff0000;
+      padding: 10px 20px; border-radius: 10px; text-decoration: none; box-shadow: 0 0 15px #ff0000;
+      transition: 0.3s; }
+    .demo-link:hover { background: #cc0000; box-shadow: 0 0 25px #ff4444; }
+  </style>
 </head>
 <body>
 
 <header>
   <h1 class="glow-text">HomeseekerS-Gamein</h1>
-  <p>Unity & AR Game Projects by Nikhil Ranjan</p>
+  <p>Unity & AR Game Projects by <b>Nikhil Ranjan</b></p>
   <nav>
     <a href="index.html">Home</a>
     <a href="#projects">Projects</a>
@@ -22,31 +31,33 @@
 
   <div class="project">
     <h3>AA Color Hit</h3>
-    <p>A ragdoll-based physics challenge where players must hit a rotating center target to save the hanging characters. Built in Unity using 2D physics and collision precision mechanics.</p>
+    <p>A ragdoll-based physics challenge where players aim and throw at a rotating target.  
+    Built using Unity 2D Physics for perfect collisions and dynamic score feedback.</p>
     <div class="gallery">
       <img src="Projects/HomeseekerS-Gamein/AA-Color-Hit/1.JPG">
       <img src="Projects/HomeseekerS-Gamein/AA-Color-Hit/2.JPG">
       <img src="Projects/HomeseekerS-Gamein/AA-Color-Hit/3.JPG">
       <img src="Projects/HomeseekerS-Gamein/AA-Color-Hit/4.JPG">
-      <img src="Projects/HomeseekerS-Gamein/AA-Color-Hit/5.JPG">
-      <img src="Projects/HomeseekerS-Gamein/AA-Color-Hit/6.JPG">
     </div>
   </div>
 
   <div class="project">
     <h3>AR Dragon Experience</h3>
-    <p>An interactive Augmented Reality experience where scanning a dragon image spawns a 3D animated dragon that reacts to the environment. Developed with Unity AR Foundation.</p>
+    <p>This AR project lets users bring a 3D animated dragon into the real world.  
+    Built with Unity AR Foundation — experience real-time scaling, tracking, and animation sync with the camera feed.</p>
     <div class="gallery">
       <img src="Projects/HomeseekerS-Gamein/AR/1.JPG">
       <img src="Projects/HomeseekerS-Gamein/AR/2.JPG">
       <img src="Projects/HomeseekerS-Gamein/AR/3.JPG">
       <img src="Projects/HomeseekerS-Gamein/AR/4.JPG">
     </div>
+    <img src="AR.JPG" alt="AR Demo" style="width:80%;border-radius:15px;margin-top:25px;box-shadow:0 0 25px #b8b8ff;">
   </div>
 
   <div class="project">
     <h3>Dus Ka Dum Quiz Game</h3>
-    <p>TV-style quiz experience featuring question logic, timer system, and stage-based design. Includes a local leaderboard and sound feedback for correct/wrong answers.</p>
+    <p>Inspired by the TV game show, this project features interactive question-answer gameplay,  
+    score tracking, and timed challenge rounds — designed for desktop and mobile.</p>
     <div class="gallery">
       <img src="Projects/HomeseekerS-Gamein/Dus-Ka-Dum-Quiz-Game/1.JPG">
       <img src="Projects/HomeseekerS-Gamein/Dus-Ka-Dum-Quiz-Game/2.JPG">
@@ -57,28 +68,28 @@
 
   <div class="project">
     <h3>Memorise Switch Color</h3>
-    <p>A reflex-based memory puzzle that tests the player’s recall through two alternating phases of color switching. Built with fast transitions, UI feedback, and progressive challenge.</p>
+    <p>A fast-paced memory puzzle where players switch between colors and patterns to score points.  
+    Features dynamic animation, UI feedback, and incremental challenge levels.</p>
     <div class="gallery">
       <img src="Projects/HomeseekerS-Gamein/Memorise-Switch-Color/1.JPG">
       <img src="Projects/HomeseekerS-Gamein/Memorise-Switch-Color/2.JPG">
       <img src="Projects/HomeseekerS-Gamein/Memorise-Switch-Color/3.JPG">
       <img src="Projects/HomeseekerS-Gamein/Memorise-Switch-Color/4.JPG">
     </div>
+    <a class="demo-link" href="https://youtu.be/B7pFk4Jd8DY" target="_blank">▶ Watch Demo</a>
   </div>
 
   <a class="btn" href="index.html">⬅ Back to Home</a>
 </section>
 
-<footer>
-  <p>© 2025 Nikhil Ranjan | HomeseekerS-Gamein</p>
-</footer>
+<footer><p>© 2025 <b>Nikhil Ranjan</b> | HomeseekerS-Gamein</p></footer>
 
 <script>
 const faders=document.querySelectorAll('.fade-section');
-const observer=new IntersectionObserver((entries,obs)=>{
-entries.forEach(entry=>{if(!entry.isIntersecting)return;entry.target.classList.add('visible');obs.unobserve(entry.target);});
+const obs=new IntersectionObserver((e,o)=>{
+e.forEach(x=>{if(!x.isIntersecting)return;x.target.classList.add('visible');o.unobserve(x.target);});
 },{threshold:0.2});
-faders.forEach(f=>observer.observe(f));
+faders.forEach(f=>obs.observe(f));
 </script>
 
 </body>
