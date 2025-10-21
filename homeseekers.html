@@ -9,6 +9,7 @@
     body, h1, h2, h3, p, a { font-family: 'Times New Roman', serif; font-weight: bold; }
     .gallery img { border-radius: 12px; object-fit: cover; width: 260px; transition: 0.4s; }
     .gallery img:hover { transform: scale(1.1); box-shadow: 0 0 25px #ffffff, 0 0 40px #b8b8ff; }
+    .fade-section { opacity: 1 !important; transform: translateY(0) !important; } /* ensure always visible */
   </style>
 </head>
 <body>
@@ -22,7 +23,7 @@
   </nav>
 </header>
 
-<section id="projects" class="fade-section visible">
+<section id="projects" class="fade-section">
   <h2>🎮 HomeseekerS-Gamein Projects</h2>
 
   <div class="project">
@@ -47,7 +48,6 @@
       <img src="Projects/HomeseekerS-Gamein/AR/3.JPG">
       <img src="Projects/HomeseekerS-Gamein/AR/4.JPG">
     </div>
-    <!-- AR Demo button removed as per your request -->
     <img src="AR.JPG" alt="AR Demo" style="width:80%;border-radius:15px;margin-top:25px;box-shadow:0 0 25px #b8b8ff;">
   </div>
 
@@ -80,13 +80,6 @@
 </section>
 
 <footer><p>© 2025 <b>Nikhil Ranjan</b> | HomeseekerS-Gamein</p></footer>
-
-<script>
-// simplified fade-in to fix blank load issue
-window.addEventListener('load', () => {
-  document.querySelectorAll('.fade-section').forEach(sec => sec.classList.add('visible'));
-});
-</script>
 
 </body>
 </html>
