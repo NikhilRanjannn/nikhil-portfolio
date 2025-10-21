@@ -9,10 +9,10 @@
 :root {
   --bg-dark: #050710;
   --text-main: #ffffff;
-  --text-dim: #c9c9d6;
-  --neon-primary: #00fff5;
-  --neon-secondary: #ff44cc;
-  --neon-accent: #b026ff;
+  --text-dim: #d8d8d8;
+  --neon-primary: #ffffff;
+  --neon-secondary: #b8b8ff;
+  --neon-accent: #9a9aff;
 }
 
 /* === BODY === */
@@ -36,41 +36,30 @@ header {
   text-align: center;
   padding: 60px 20px;
   background: rgba(10, 10, 35, 0.9);
-  box-shadow: 0 0 20px rgba(0, 255, 245, 0.25);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid var(--neon-primary);
 }
 
 .glow-text {
   font-size: 2.8em;
   color: var(--neon-primary);
-  text-shadow: 0 0 20px var(--neon-primary), 0 0 40px var(--neon-secondary);
+  text-shadow: 0 0 25px var(--neon-primary), 0 0 50px var(--neon-secondary);
   animation: pulseGlow 3s infinite alternate;
 }
 
 @keyframes pulseGlow {
-  from { text-shadow: 0 0 15px var(--neon-primary), 0 0 25px var(--neon-secondary); }
-  to { text-shadow: 0 0 35px var(--neon-secondary), 0 0 55px var(--neon-primary); }
-}
-
-header p {
-  color: var(--text-dim);
-  margin-top: 8px;
+  from { text-shadow: 0 0 15px var(--neon-primary); }
+  to { text-shadow: 0 0 40px var(--neon-secondary); }
 }
 
 /* === NAVIGATION === */
-nav {
-  margin-top: 15px;
-}
-
 nav a {
   color: var(--text-main);
   margin: 0 12px;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1px;
   transition: 0.3s;
 }
-
 nav a:hover {
   color: var(--neon-secondary);
   text-shadow: 0 0 12px var(--neon-secondary);
@@ -84,17 +73,9 @@ section {
   transform: translateY(40px);
   transition: all 1s ease;
 }
-
 section.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-section h2 {
-  font-size: 2em;
-  color: var(--neon-primary);
-  text-shadow: 0 0 10px var(--neon-primary), 0 0 25px var(--neon-secondary);
-  margin-bottom: 25px;
 }
 
 /* === BUTTONS === */
@@ -104,18 +85,17 @@ section h2 {
   padding: 12px 28px;
   font-weight: bold;
   color: #000;
-  background: linear-gradient(135deg, var(--neon-primary), var(--neon-secondary));
+  background: linear-gradient(135deg, #ffffff, #b8b8ff);
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.4s;
-  box-shadow: 0 0 20px rgba(0, 255, 245, 0.25);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
 }
-
 .btn:hover {
   transform: scale(1.1);
   color: #fff;
-  background: var(--neon-accent);
-  box-shadow: 0 0 30px var(--neon-accent), 0 0 40px var(--neon-primary);
+  background: #9a9aff;
+  box-shadow: 0 0 30px #fff, 0 0 50px #9a9aff;
 }
 
 /* === PROJECTS === */
@@ -126,24 +106,15 @@ section h2 {
   padding: 25px;
   margin: 30px auto;
   max-width: 950px;
-  box-shadow: 0 0 15px rgba(0, 255, 245, 0.15);
-  transition: all 0.4s;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
-
 .project:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 30px var(--neon-primary), 0 0 50px var(--neon-secondary);
 }
-
 .project h3 {
   color: var(--neon-primary);
-  text-shadow: 0 0 10px var(--neon-primary);
-  margin-bottom: 10px;
-}
-
-.project p {
-  color: var(--text-dim);
-  margin-bottom: 10px;
+  text-shadow: 0 0 15px var(--neon-primary);
 }
 
 /* === GALLERY === */
@@ -152,33 +123,19 @@ section h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  margin-top: 10px;
 }
-
 .gallery img {
   width: 220px;
   border-radius: 10px;
   transition: all 0.4s;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
 }
-
 .gallery img:hover {
   transform: scale(1.08);
   box-shadow: 0 0 25px var(--neon-primary), 0 0 35px var(--neon-secondary);
 }
 
-/* === CONTACT & FOOTER === */
-#contact a {
-  color: var(--neon-primary);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-#contact a:hover {
-  color: var(--neon-secondary);
-  text-shadow: 0 0 10px var(--neon-secondary);
-}
-
+/* === FOOTER === */
 footer {
   text-align: center;
   padding: 20px;
