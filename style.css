@@ -108,7 +108,7 @@ section h2 {
   margin: 20px 10px;
   padding: 12px 32px;
   font-size: 1.05em;
-  color: #000; /* BLACK text for itch.io and other buttons */
+  color: #000 !important; /* FORCE black text on all buttons (like itch.io) */
   background: linear-gradient(135deg, #ffffff, #b8b8ff);
   border-radius: 12px;
   text-decoration: none;
@@ -118,8 +118,8 @@ section h2 {
 
 .btn:hover {
   transform: scale(1.1);
-  color: #fff;
-  background: #9a9aff;
+  color: #000 !important; /* remain black even on hover */
+  background: #eaeaff;
   box-shadow: 0 0 30px #fff, 0 0 60px #9a9aff;
 }
 
