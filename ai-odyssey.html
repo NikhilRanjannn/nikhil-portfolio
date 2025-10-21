@@ -10,28 +10,37 @@
 
 <header>
   <h1 class="glow-text">AI Odyssey — IIT Patna</h1>
-  <p>Adaptive AI using Reinforcement Learning</p>
+  <p>Adaptive AI Using Reinforcement Learning</p>
   <nav>
     <a href="index.html">Home</a>
-    <a href="#projects">Projects</a>
+    <a href="#projects">Project</a>
   </nav>
 </header>
 
 <section id="projects" class="fade-section">
   <h2>🤖 AI Odyssey</h2>
-  <p><strong>AI Odyssey: Adaptive Intelligence through Reinforcement Learning (RL)</strong></p>
-  <p>This research-driven project explores AI agents that learn adaptive behaviors in Unity using Deep Reinforcement Learning (PPO) via Unity ML-Agents. The agent learns to navigate obstacles, time jumps, and reach the goal through checkpoint rewards.</p>
+  <p><b>AI Odyssey: Adaptive Intelligence through Reinforcement Learning (RL)</b></p>
+  <p>This research-driven Unity ML-Agents project explores deep reinforcement learning (PPO) for adaptive agent behavior.  
+  The agent learns to time jumps, reach checkpoints, and complete goals efficiently with rewards and penalties integrated.</p>
   <div class="gallery">
-    <img src="Projects/AI-Odyssey/1.jpg">
-    <img src="Projects/AI-Odyssey/2.jpg">
-    <img src="Projects/AI-Odyssey/3.jpg">
-    <img src="Projects/AI-Odyssey/4.jpg">
+    <img src="Projects/AI-Odyssey/1.JPG">
+    <img src="Projects/AI-Odyssey/2.JPG">
+    <img src="Projects/AI-Odyssey/3.JPG">
+    <img src="Projects/AI-Odyssey/4.JPG">
   </div>
 
   <a class="btn" href="index.html">⬅ Back to Home</a>
 </section>
 
 <footer><p>© 2025 Nikhil Ranjan | AI Odyssey</p></footer>
+
+<script>
+const faders=document.querySelectorAll('.fade-section');
+const obs=new IntersectionObserver((e,o)=>{
+e.forEach(x=>{if(!x.isIntersecting)return;x.target.classList.add('visible');o.unobserve(x.target);});
+},{threshold:0.2});
+faders.forEach(f=>obs.observe(f));
+</script>
 
 </body>
 </html>

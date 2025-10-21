@@ -10,7 +10,7 @@
 
 <header>
   <h1 class="glow-text">Zero-Metrix</h1>
-  <p>3D action prototypes developed by Nikhil Ranjan</p>
+  <p>3D Action & Prototype Games by Nikhil Ranjan</p>
   <nav>
     <a href="index.html">Home</a>
     <a href="#projects">Projects</a>
@@ -22,38 +22,38 @@
 
   <div class="project">
     <h3>Hit 3D</h3>
-    <p>Helix-jump inspired arcade game using physics-based controls and color feedback. Built with optimized mobile performance and level-based progression.</p>
+    <p>Helix-jump inspired arcade game using physics-based controls and color feedback. Built with mobile-optimized performance and level-based progression.</p>
     <div class="gallery">
-      <img src="Projects/Zero-Metrix/Hit-3D/1.jpg">
-      <img src="Projects/Zero-Metrix/Hit-3D/2.jpg">
-      <img src="Projects/Zero-Metrix/Hit-3D/3.jpg">
-      <img src="Projects/Zero-Metrix/Hit-3D/4.jpg">
-      <img src="Projects/Zero-Metrix/Hit-3D/5.jpg">
+      <img src="Projects/Zero-Metrix/Hit-3D/1.JPG">
+      <img src="Projects/Zero-Metrix/Hit-3D/2.JPG">
+      <img src="Projects/Zero-Metrix/Hit-3D/3.JPG">
+      <img src="Projects/Zero-Metrix/Hit-3D/4.JPG">
+      <img src="Projects/Zero-Metrix/Hit-3D/5.JPG">
     </div>
   </div>
 
   <div class="project">
     <h3>Neo Drive</h3>
-    <p>A rhythm-driven racing game where the environment glows to the beat. Combines motion blur and post-processing for a cyber aesthetic.</p>
+    <p>A rhythm-driven racing game where environments glow to the beat. Combines motion blur and post-processing for a cyber-futuristic aesthetic.</p>
     <div class="gallery">
-      <img src="Projects/Zero-Metrix/Neo-Drive/1.jpg">
-      <img src="Projects/Zero-Metrix/Neo-Drive/2.jpg">
-      <img src="Projects/Zero-Metrix/Neo-Drive/3.jpg">
-      <img src="Projects/Zero-Metrix/Neo-Drive/4.jpg">
-      <img src="Projects/Zero-Metrix/Neo-Drive/5.jpg">
-      <img src="Projects/Zero-Metrix/Neo-Drive/6.jpg">
+      <img src="Projects/Zero-Metrix/Neo-Drive/1.JPG">
+      <img src="Projects/Zero-Metrix/Neo-Drive/2.JPG">
+      <img src="Projects/Zero-Metrix/Neo-Drive/3.JPG">
+      <img src="Projects/Zero-Metrix/Neo-Drive/4.JPG">
+      <img src="Projects/Zero-Metrix/Neo-Drive/5.JPG">
+      <img src="Projects/Zero-Metrix/Neo-Drive/6.JPG">
     </div>
   </div>
 
   <div class="project">
     <h3>Rocketman</h3>
-    <p>A rocket-launching adventure with physics controls, coin collection, and level goals. Includes power-ups and explosion particle effects.</p>
+    <p>A rocket-launching adventure featuring physics controls, coin collection, and level goals. Includes power-ups and explosion particle effects.</p>
     <div class="gallery">
-      <img src="Projects/Zero-Metrix/Rocketman/1.jpg">
-      <img src="Projects/Zero-Metrix/Rocketman/2.jpg">
-      <img src="Projects/Zero-Metrix/Rocketman/3.jpg">
-      <img src="Projects/Zero-Metrix/Rocketman/4.jpg">
-      <img src="Projects/Zero-Metrix/Rocketman/5.jpg">
+      <img src="Projects/Zero-Metrix/Rocketman/1.JPG">
+      <img src="Projects/Zero-Metrix/Rocketman/2.JPG">
+      <img src="Projects/Zero-Metrix/Rocketman/3.JPG">
+      <img src="Projects/Zero-Metrix/Rocketman/4.JPG">
+      <img src="Projects/Zero-Metrix/Rocketman/5.JPG">
     </div>
   </div>
 
@@ -61,6 +61,14 @@
 </section>
 
 <footer><p>© 2025 Nikhil Ranjan | Zero-Metrix</p></footer>
+
+<script>
+const faders=document.querySelectorAll('.fade-section');
+const obs=new IntersectionObserver((e,o)=>{
+e.forEach(x=>{if(!x.isIntersecting)return;x.target.classList.add('visible');o.unobserve(x.target);});
+},{threshold:0.2});
+faders.forEach(f=>obs.observe(f));
+</script>
 
 </body>
 </html>
