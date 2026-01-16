@@ -29,7 +29,11 @@
   <h2>🎓 Education</h2>
   <p><b>M.Tech in Artificial Intelligence & Data Science Engineering</b><br>IIT Patna — CPI 8.61</p>
   <p><b>B.Tech in Computer Science and Engineering</b><br>Sam Higginbottom Institute of Agriculture, Technology and Sciences, Allahabad</p>
- <a href="Resume/Nikhil_Resume.pdf" target="_blank">Download Resume</a>
+
+  <!-- ✅ FIXED RESUME BUTTON -->
+  <a class="btn" href="Resume/Nikhil_Resume.pdf" target="_blank">
+    Download Resume
+  </a>
 </section>
 
 <section id="experience" class="fade-section">
@@ -52,12 +56,18 @@
   <a class="btn" href="https://nikrann.itch.io/" target="_blank">itch.io</a>
 </section>
 
-<footer><p>© 2025 Nikhil Ranjan | All Rights Reserved</p></footer>
+<footer>
+  <p>© 2025 Nikhil Ranjan | All Rights Reserved</p>
+</footer>
 
 <script>
 const faders=document.querySelectorAll('.fade-section');
 const observer=new IntersectionObserver((entries,obs)=>{
-entries.forEach(entry=>{if(!entry.isIntersecting)return;entry.target.classList.add('visible');obs.unobserve(entry.target);});
+  entries.forEach(entry=>{
+    if(!entry.isIntersecting)return;
+    entry.target.classList.add('visible');
+    obs.unobserve(entry.target);
+  });
 },{threshold:0.2});
 faders.forEach(f=>observer.observe(f));
 </script>
